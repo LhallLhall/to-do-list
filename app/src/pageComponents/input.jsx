@@ -17,13 +17,15 @@ export default function Input (props){
         inputName.current.value = null
     
     }
+
+    
     
     return(
         <div className="">
+            
             <input ref={inputName} placeholder='Type To-Do Here' type='text' name='name' id='input'></input>
             <button onClick={submit} >click</button>
             <div>
-
             </div>
         </div>
     )

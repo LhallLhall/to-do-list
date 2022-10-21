@@ -1,13 +1,27 @@
 import ToDoItem from './toDoItem.jsx'
 export default function ToDoList (props){
-    console.log(props.item.length)
-    // let amountOfItems = props.item.length
+
+    let completedFilter = props.item.filter(x => x.activeStatus == false).length
+    let activeFilter = props.item.filter(x => x.activeStatus == true).length
+
+    let amount
+    let text
+    if (props.page === 'Active'){
+        amount = activeFilter
+        text = 'To-Do\'s Left'
+        // console.log(amount)
+    } else if (props.page === 'Completed'){
+        amount = completedFilter
+        text = 'To-Do\'s Completed'
+    } else {
+        amount = props.item.length
+        text = 'Total To-Do\'s'
+    }
     return (
         <div>
-            <h5>{props.amountOfItems} To-Do's Left</h5>
-            <ToDoItem item={props.item} setItem={props.setItem}>
+            <h5>{amount} {text}</h5>
+            <ToDoItem amountOfItems={props.amountOfItems} item={props.item} setItem={props.setItem} page={props.page} setPage={props.setPage}/>
             
-            </ToDoItem>
             
         </div>
     )

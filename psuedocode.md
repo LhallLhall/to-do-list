@@ -8,8 +8,12 @@
     - toDoList
         - holds all of the items that are created (will probably style in here)
     - buttons
-        - will control the items. 
-        - when the button is clicked it will setPage to a string - it will check if that string matches the string its checking it will return a a filtered list of the items
+        - will control the items.
+        - when the button is clicked it will setPage to a string
+        - it will check if that string matches the string its 
+        checking it will return a filtered list of the items
+        - then i will map through it and return it into state.
+        
 # Functions
     - Complete()
 
