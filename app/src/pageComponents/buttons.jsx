@@ -6,14 +6,18 @@ export default function Buttons (props) {
         props.item.forEach((item) => {
 
             if (item.activeStatus === false){
-                props.setItem(props.item.filter((a) => a.id !== item.id));
+                item.activeStatus = null
+                console.log(item.activeStatus)
             }})
-        // for (let i = 0; i < props.item.length; i++) {
-            
-        //         props.setItem(props.item.filter((a) => a.id !== props.item.id));
-            
-        // }
+        
     }
+        function forSureDelete () {
+            for (let i = 0; i < props.item.length; i++){
+                if (props.item.activeStatus === null){
+                    
+                }
+            }
+        }
 
 
 
