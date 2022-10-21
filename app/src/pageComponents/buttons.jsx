@@ -1,7 +1,22 @@
 export default function Buttons (props) {
     console.log(props)
 
-    // let array = props.item 
+    function megaDelete () {
+        console.log('is this working???')
+        props.item.forEach((item) => {
+
+            if (item.activeStatus === false){
+                props.setItem(props.item.filter((a) => a.id !== item.id));
+            }})
+        // for (let i = 0; i < props.item.length; i++) {
+            
+        //         props.setItem(props.item.filter((a) => a.id !== props.item.id));
+            
+        // }
+    }
+
+
+
     
     return(
         <div className="">
@@ -23,7 +38,12 @@ export default function Buttons (props) {
                 props.setPage('Completed')
             }}>Completed</button>
             </div>
-            
+            <div>
+                <button onClick={() => {
+                    megaDelete()
+                }}>Delete Completed
+                </button>
+            </div>
         </div>
     )
 }
