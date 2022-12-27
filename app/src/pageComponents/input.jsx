@@ -21,10 +21,10 @@ export default function Input (props){
     
     
     return(
-        <div className="">
+        <div className="my-2">
             
             <input ref={inputName} placeholder='Type To-Do Here' type='text' name='name' id='input'></input>
-            <button onClick={submit} >click</button>
+            <button className='btn btn-primary ms-2' onClick={submit} >Add To-Do</button>
             <div>
             </div>
         </div>

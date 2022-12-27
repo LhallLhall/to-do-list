@@ -26,22 +26,33 @@ export default function App() {
   let amountOfItems = item.length;
 
   return (
-    <div>
-      <h1>TO-DO-LIST</h1>
-      <h4>
-        We all know you just put these in here then forget about them and never
-        do them
-      </h4>
-      <Input item={item} setItem={setItem} />
-      <ToDoList
-        item={item}
-        setItem={setItem}
-        amountOfItems={amountOfItems}
-        page={page}
-        setPage={setPage}
-      />
-      <Buttons item={item} setItem={setItem} setPage={setPage} page={page} />
-    </div>
+    <div className="container">
+      <div className='row'>
+        <h1 className=" col-12 my-2 text-center ">TO-DO-LIST</h1>
+        <h4 className='col-12 my-2 text-center'>
+          We all know you just put these in here then forget about them and never
+          do them ;)
+        </h4>
+        </div>
+        <div className=''>
+          <div className='col-12 text-center'>
+
+
+        <Input item={item} setItem={setItem} />
+          </div>
+          <div className='col-8 offset-2 text-center'>
+          <ToDoList
+            item={item}
+            setItem={setItem}
+            amountOfItems={amountOfItems}
+            page={page}
+            setPage={setPage}
+            />
+            </div>
+          </div>
+        <Buttons item={item} setItem={setItem} setPage={setPage} page={page} />
+      </div>
+    
   );
 }
 

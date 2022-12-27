@@ -19,10 +19,10 @@ export default function ToDoList (props){
     }
     return (
         <div>
+            <div className='text-center'>
             <h5>{amount} {text}</h5>
+            </div>
             <ToDoItem amountOfItems={props.amountOfItems} item={props.item} setItem={props.setItem} page={props.page} setPage={props.setPage}/>
-            
-            
         </div>
     )
 }

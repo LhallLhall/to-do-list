@@ -23,31 +23,42 @@ export default function Buttons (props) {
 
     
     return(
-        <div className="">
-            <div>
+        <div className=" row mt-3 ">
             
-            <button onClick={() => {
+            <div className='col-4 d-flex justify-content-end'>
+            <button 
+            className='btn btn-secondary'
+            onClick={() => {
                 // all()
                 props.setPage('All')
             
             }}>All</button>
-            
-            <button onClick={() => {
+            </div>
+
+            <div className='col-4 d-flex justify-content-center'>
+            <button 
+            className='btn btn-secondary'
+            onClick={() => {
                 // active()
                 props.setPage('Active')
                 }}>Active</button>
-            
-            <button onClick={() => {
+            </div>
+
+            <div className='col-4 '>
+            <button 
+            className='btn btn-secondary d-flex justify-content-start'
+            onClick={() => {
                 // Completed()
                 props.setPage('Completed')
             }}>Completed</button>
             </div>
-            <div>
+            
+            {/* <div>
                 <button onClick={() => {
                     megaDelete()
                 }}>Delete Completed
                 </button>
-            </div>
+            </div> */}
         </div>
     )
 }
